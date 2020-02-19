@@ -12,16 +12,63 @@
 <body>
     <nav class="ns-navbar">
         <div class="container ns-navbar__wrapper">
-            <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+            <div class="ns-navbar__logo-wrapper">
+                <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+                <a href="#" class="ns-navbar__link ns-navbar__link--hamburger">
+                    <i class="fas fa-bars ns-navbar__icon ns-navbar__icon--open"></i>
+                    <i class="fas fa-times ns-navbar__icon ns-navbar__icon--close"></i>
+                </a>
+            </div>
             <div class="ns-navbar__actions">
                 <p class="ns-navbar__user-name">Apellido, Nombre</p>
-                <i class="fas fa-cog  ns-navbar__icon"></i> 
-                <i class="fas fa-sign-out-alt  ns-navbar__icon"></i>
+                <a href="#" class="ns-navbar__link ns-navbar__link--config">
+                    <i class="fas fa-cog  ns-navbar__icon"></i> 
+                </a>
+                <a href="#" class="ns-navbar__link ns-navbar__link--logout">
+                    <i class="fas fa-sign-out-alt  ns-navbar__icon"></i>
+                </a>
             </div>
         </div>
     </nav>
-    <main class="ns-content container">
-        <h1>Contenido de cada vista</h1>
+    <main class="container ns-content ns-content--main-menu">
+        <h1 class="ns-title-box">Bienvenido <span> al portal de administración </span></h1>
+        <ul class="ns-main-menu">
+            <li class="ns-main-menu__item">
+                <a href="#" class="ns-main-menu__button">
+                    Permisos médicos / Empresas
+                </a>
+            </li>
+            <li class="ns-main-menu__item">
+                <a href="#" class="ns-main-menu__button">
+                    Listado de usuarios
+                </a>
+            </li>
+            <li class="ns-main-menu__item">
+                <a href="#" class="ns-main-menu__button">
+                    Cargar estudio
+                </a>
+            </li>
+            <li class="ns-main-menu__item">
+                <a href="#" class="ns-main-menu__button">
+                    Cargar documentación médica solicitante
+                </a>
+            </li>
+            <li class="ns-main-menu__item">
+                <a href="#" class="ns-main-menu__button">
+                    Registrar empresas
+                </a>
+            </li>
+            <li class="ns-main-menu__item">
+                <a href="#" class="ns-main-menu__button">
+                    Vinculación menores de 16 años
+                </a>
+            </li>
+        </ul>
     </main>
+    <footer class="ns-footer">
+        <p class="ns-footer__text">Por cualquier consulta comuníquese al teléfono (011) 4784-0614 a nuestro mail info@netmedsolutions.com <br>            V. 20.1.4</p>
+        <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
+    </footer>
+    <script src="scripts/global.js"></script>
 </body>
 </html>

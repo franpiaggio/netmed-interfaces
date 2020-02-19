@@ -1,20 +1,53 @@
+/**************
+* Barra superior
+***************/
 .ns-navbar{
-    min-height: 100px;
     border-bottom: 2px solid var(--blue);
     display: flex;
     align-items: center;
+    // Contenedor
     .ns-navbar__wrapper{
         display: flex;
         align-items: center;    
         justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .ns-navbar__logo-wrapper{
+        width: 100%;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media(min-width: 768px){
+            width: auto;
+        }
     }
     .ns-navbar__logo{
         max-width: 256px;
     }
+    // Nombre, íconos
     .ns-navbar__actions{
+        width: 100%;
+        margin: 1em 0;
+        display: none;
+        // Visible por default en desktop
+        @media(min-width: 768px){
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: auto;
+            margin: 0;
+        }
+    }
+    // Visible en mobile
+    .ns-navbar__actions--open{
         display: flex;
         align-items: center;
+        .ns-navbar__link--logout{
+            margin-left: auto;
+        }
     }
+    // Nombre del usuario
     .ns-navbar__user-name{
         min-width: 150px;
         min-height: 42px;
@@ -24,10 +57,40 @@
         padding: .5rem;
         margin: 0 ;
         text-align: center;
+        cursor: default ;
+    }
+    .ns-navbar__link{
+        margin-left: 1rem;
+        &:hover{
+            text-decoration: none;
+        }
     }
     .ns-navbar__icon{
+        display: block;
+        padding: .5em;
         color: var(--blue);
         font-size: 1.3rem;
-        margin-left: 1rem;
+    }
+    // Hamburger visible, meneu cerrado
+    .ns-navbar__link--hamburger{
+        // Icono X oculto
+        .ns-navbar__icon--close{
+            display: none;
+        }
+        // Desktop oculta hamburger
+        @media(min-width: 768px){
+            display: none;
+        }
+    }
+    // Cuando haces click
+    .ns-navbar__link--hamburger--open{
+        // Oculta la hamburgesa
+        .ns-navbar__icon--open{
+            display: none;
+        }
+        // Muestra la X
+        .ns-navbar__icon--close{
+            display: block;
+        }
     }
 }

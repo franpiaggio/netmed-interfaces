@@ -1,2 +1,6 @@
-@import 'variables/colors.scss';
-@import 'components/navbar.scss';
+@import 'variables/colors';
+@import 'variables/bootstrap-fixes';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/title-box';
+@import 'views/main-menu';

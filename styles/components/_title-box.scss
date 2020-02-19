@@ -1,0 +1,20 @@
+.ns-title-box{
+    font-size: 1.56rem;
+    max-width: 80%;
+    background-color: var(--grey);
+    color: var(--blue);
+    padding: 20px 50px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    @media(min-width: 768px){
+        max-width: 740px;
+    }
+    span{
+        display: none;
+        @media(min-width: 768px){
+            display: block
+        }
+    }
+}
