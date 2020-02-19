@@ -215,19 +215,13 @@
   margin-bottom: auto;
 }
 
-@media (min-width: 768px) {
-  .ns-title-box {
-    max-width: 740px;
-  }
-}
-
 .ns-title-box span {
   display: none;
 }
 
 @media (min-width: 768px) {
   .ns-title-box span {
-    display: block;
+    display: inline-block;
   }
 }
 
