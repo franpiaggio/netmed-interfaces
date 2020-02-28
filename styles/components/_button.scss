@@ -1,0 +1,17 @@
+.ns-button{
+    background-color: var(--blue);
+    font-weight: bold;
+    color: white;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    padding: .4rem 1rem;
+    text-align: center;
+    &::placeholder { 
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+    &.ns-button--outline{
+        background-color: white;
+        color: var(--blue);
+    }
+}
