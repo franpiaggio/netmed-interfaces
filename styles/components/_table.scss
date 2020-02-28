@@ -32,14 +32,14 @@
     }
     .ns-table__text:nth-of-type(1),
     .ns-table__header-title:nth-of-type(1){
-        width: 50%;
+        width: 40%;
         @media(min-width: 768px){
             width: 10%;
         }
     }
     .ns-table__text:nth-of-type(2),
     .ns-table__header-title:nth-of-type(2){
-        width: 50%;
+        width: 40%;
         @media(min-width: 768px){
             width: 20%;
         }
@@ -64,6 +64,14 @@
         display: none;
         @media(min-width: 768px){
             display: block;
+        }
+    }
+    .ns-table__text:nth-of-type(8),
+    .ns-table__header-title:nth-of-type(8){
+        width: 10%;
+        text-align: right;
+        @media(min-width: 768px){
+            display: none;
         }
     }
 }
