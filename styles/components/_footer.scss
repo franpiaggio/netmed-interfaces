@@ -5,22 +5,25 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    flex-wrap: wrap;
     @media(min-width: 768px){
         flex-direction: row;
         justify-content: center;
     }
+    @media(min-width: 1920px){
+        background-image: url('../img/footer-logo.png');
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
     .ns-footer__text{
-        margin-left: auto;
+        width: 100%;
     }
     .ns-footer__logo{
         height: auto;
         max-width: 100%;
         margin: 0px auto;
-        @media(min-width: 460px){
-            max-width: 200px;
-            max-height: 40px;
-            margin-left: auto;
-            margin-right: 0;
+        @media(min-width: 1920px){
+            display: none;
         }
     }
 }

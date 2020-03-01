@@ -1,0 +1,12 @@
+.ns-filter-box{
+    width: 100%;
+    border: 1px solid var(--grey);
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    .ns-filter-box__text{
+        margin: 0;
+    }
+}

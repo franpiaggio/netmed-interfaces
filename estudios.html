@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Netmed Solutions</title>
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="lib/fontawesome-5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="lib/lightpick/css/lightpick.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="ns-navbar">
+        <div class="container ns-navbar__wrapper">
+            <div class="ns-navbar__logo-wrapper">
+                <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+                <a href="#" class="ns-navbar__link ns-navbar__link--hamburger">
+                    <i class="fas fa-bars ns-navbar__icon ns-navbar__icon--open"></i>
+                    <i class="fas fa-times ns-navbar__icon ns-navbar__icon--close"></i>
+                </a>
+            </div>
+            <div class="ns-navbar__actions">
+                <p class="ns-navbar__user-name">Apellido, Nombre</p>
+                <a href="#" class="ns-navbar__link ns-navbar__link--config">
+                    <i class="fas fa-cog  ns-navbar__icon"></i> 
+                </a>
+                <a href="#" class="ns-navbar__link ns-navbar__link--logout">
+                    <i class="fas fa-sign-out-alt  ns-navbar__icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="container ns-content ns-content--table-view">
+        <h1 class="ns-title-box">Bienvenido <span> a tu portal de estudios </span></h1>
+        <form method="POST" action="#" class="ns-filter-box">
+            <div class="ns-filter-box__desktop-filters">
+                <p class="ns-filter-box__text">Filtro de búsqueda</p>
+                <div class="ns-filter-box__dates">
+                    <!-- Range Inputs -->
+                    <label for="startInput" class="ns-input-range__label">Fecha inicial:</label>
+                    <input type="text" name="startInput" id="startInput" class="ns-input-range" placeholder="dd/mm/yy">
+                    <label for="startInput" class="ns-input-range__label">Fecha final:</label>
+                    <input type="text" name="endInput" id="endInput" class="ns-input-range" placeholder="dd/mm/yy">
+                    <!-- Hidden inputs para el envío del form -->
+                    <input type="date" id="start" class="ns-input-date">
+                    <input type="date" id="end" class="ns-input-date">
+                </div>
+                <div class="ns-filter-box__inputs">
+                    <input type="submit" value="Buscar" class="ns-button">
+                    <input type="submit" value="Borrar" class="ns-button ns-button--outline">
+                </div>
+            </div>
+            <div class="ns-filter-box__mobile-filters">
+                <input type="text" placeholder="Filtrar por fecha" class="ns-button" id="mobileRange">
+                <input type="submit" value="Borrar filtros" class="ns-button ns-button--outline">
+            </div>
+        </form>
+        <div class="ns-table">
+            <div class="ns-table__header">
+                <p class="ns-table__header-title">Fecha del estudio</p>
+                <p class="ns-table__header-title">Estudio</p>
+                <p class="ns-table__header-title">Médico solicitante</p>
+                <p class="ns-table__header-title">Modalidad</p>
+                <p class="ns-table__header-title">Estudio</p>
+                <p class="ns-table__header-title">Informe</p>
+                <p class="ns-table__header-title">Compartir</p>
+                <p class="ns-table__header-title">Acciones</p>
+            </div>
+            <div class="ns-table__content">
+                <p class="ns-table__text">28/02/2020</p>
+                <p class="ns-table__text">Resonancia de rodilla</p>
+                <p class="ns-table__text">Médico solicitante</p>
+                <p class="ns-table__text">MR</p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+            </div>
+            <div class="ns-table__content">
+                <p class="ns-table__text">28/02/2020</p>
+                <p class="ns-table__text">Resonancia de rodilla</p>
+                <p class="ns-table__text">Médico solicitante</p>
+                <p class="ns-table__text">MR</p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+                <p class="ns-table__text"><i class="fas fa-bars"></i></p>
+            </div>
+        </div>
+    </main>
+    <footer class="ns-footer">
+        <p class="ns-footer__text">Por cualquier consulta comuníquese al teléfono (011) 4784-0614 a nuestro mail info@netmedsolutions.com 
+            <br>V. 20.1.4</p>
+        <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
+    </footer>
+    <script src="lib/momentjs/momentjs.min.js"></script>
+    <script src="lib/lightpick/lightpick.js"></script>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/filters.js"></script>
+</body>
+</html>
