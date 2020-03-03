@@ -14,10 +14,13 @@
     }
     .ns-table__content{
         display: flex;
-        // justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         color: var(--violet);
         padding: 1rem;
+        @media(min-width: 768px){
+            flex-wrap: no-wrap;    
+        }
         &:nth-child(even){
             background-color: var(--light-blue);
         }
@@ -25,11 +28,70 @@
     .ns-table__text{
         margin: 0;
         padding: 1rem 0;
+        a{
+            color: var(--violet);
+            font-size: 1.5rem;
+            transition: all .3s;
+            cursor: pointer;
+            &:hover{
+                color: darken( #5782F0, 15%)
+            }
+        }
     }
     .ns-table__text,
     .ns-table__header-title{
         text-align: center;
     }
+    .ns-table__link i{
+        transition: transform .3s;
+    }
+    .ns-table__link--flip i{
+        transform: rotateX(180deg);
+    }
+    .ns-table__mobile-actions{
+        width: 100%;
+        height: 0px;
+        display: flex;
+        overflow: hidden;
+        transition: height .3s;
+        transition-delay: .1s;
+        @media(min-width: 768px){
+            display: none;
+        }
+        .ns-table__mobile-texts{
+            text-align: center;
+            font-size: .8rem;
+            width: 40%;
+        }
+        .ns-table__mobile-icons{
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .ns-table__mobile-icon{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                i{
+                    background-color: var(--violet);
+                    color: white;
+                    border-radius: 50%;
+                    padding: .6rem;
+                }
+                span{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    .ns-table__mobile-actions--show{
+        display: flex;
+        height: 80px;
+    }
+
+    /*
+    * Tamaños de las columnas
+    */
     .ns-table__text:nth-of-type(1),
     .ns-table__header-title:nth-of-type(1){
         width: 40%;

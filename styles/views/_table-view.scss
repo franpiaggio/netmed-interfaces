@@ -4,8 +4,9 @@
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 4rem;
-    @media(min-width: 768px){
-        min-height: 75vh;
+    min-height: 75vh;
+    .ns-table{
+        margin-bottom: 3rem;
     }
     .ns-input-date{
         display: none;
