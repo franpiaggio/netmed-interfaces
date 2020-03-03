@@ -33,7 +33,10 @@
             </div>
         </div>
     </nav>
-    <main class="ns-login"> 
+    <!--
+        Contenido del Login
+    -->
+    <main class="container ns-login"> 
         <div class="ns-login__box">
             <div class="ns-login__boxtitle">
                 <i class="fas fa-user ns-login__uicon"></i>
@@ -41,14 +44,14 @@
             </div>
             <div class="ns-login__content">
                 <form action="#" class="ns-login__form">
-                    <div class="ns-login__form-container">
-                        <label for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Ingrese su nombre de usuario" name="uname" required>
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="ingrese su contraseña" name="psw" required>
-                        <button type="submit">Login</button>
+                    <div class="ns-login__input-group">
+                        <input class="ns-login__input-item" type="text" placeholder="Ingrese su nombre de usuario" name="user">
                     </div>
-                </form>    
+                    <div class="ns-login__input-group">
+                        <input class="ns-login__input-item" type="text" placeholder="Ingrese su contraseña" name="password">
+                    </div>
+                    <input type="Ingresar" value="Submit" class="ns-button">
+                </form>
             </div>
         </div>
     </main>

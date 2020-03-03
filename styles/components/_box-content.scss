@@ -11,41 +11,45 @@
     -moz-box-shadow: 13px 11px 11px -3px rgba(0,0,0,0.16);
     box-shadow: 13px 11px 11px -3px rgba(0,0,0,0.16);
     width: 45%;
-    height: 800px;
+    height: 700px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     background-color: var(--blue);
     border: solid .5px var(--grey);
     border-radius: 6px;
 }
 .ns-login__boxtitle{
     display: flex;
-    flex-direction: column;
-    padding-right: 110px;
-
+    flex-direction: row;
+    align-content: stretch;
+    flex-basis: 30%;
 }
-.ns-login__content{
-    width: 65%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-}
-
 .ns-login__text{
     color: #ffffff;
     font-size: 30px;
     font-weight: bold;
+    align-self: center;
 }
 .ns-login__uicon{
     color: #ffffff;
-    padding-top: 40px;
     font-size: 120px;
+    align-self: center;
+    padding: 0.5em;
+}
+.ns-login__content{
+    flex-basis: 70%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
 }
 .ns-login__form{
-    width: 70%;
+    width: 80%;
     display: flex;
-    justify-content: left;
     flex-direction: column;
-    padding-top: 80px;
+    padding: 2em;
+}
+.ns-login__input-item{
+    width: 100%;
+    padding: 0.5em;
 }
 
