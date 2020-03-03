@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Web Netmed Solutions</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-grid.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="lib/fontawesome-5.12.1/css/all.min.css">
@@ -36,21 +37,18 @@
     <!--
         Contenido del Login
     -->
-    <main class="container ns-login"> 
-        <div class="ns-login__box">
-            <div class="ns-login__boxtitle">
-                <i class="fas fa-user ns-login__uicon"></i>
-                <span class="ns-login__text">Log-in</span>
+    <main class="container ns-content ns-content--recover"> 
+        <div class="ns-box">
+            <div class="ns-box__title">
+                <i class="fas fa-lock ns-box__uicon"></i>
+                <p class="ns-box__text">¿Olvidó su contraseña?</p>
+                <p class="ns-box__detail"> <span class="ns-box__detail-icon">!</span> Crear clave provisoria </p>
             </div>
-            <div class="ns-login__content">
-                <form action="#" class="ns-login__form">
-                    <div class="ns-login__input-group">
-                        <input class="ns-login__input-item" type="text" placeholder="Ingrese su nombre de usuario" name="user">
-                    </div>
-                    <div class="ns-login__input-group">
-                        <input class="ns-login__input-item" type="text" placeholder="Ingrese su contraseña" name="password">
-                    </div>
-                    <input type="Ingresar" value="Submit" class="ns-button">
+            <div class="ns-box__content">
+                <form action="#" class="ns-box__form">
+                    <input class="ns-input" type="number" required placeholder="Ingrese su documento" name="user">
+                    <input class="ns-input" type="email" required placeholder="Ingrese su email" name="password">
+                    <input type="submit" value="Enviar" class="ns-button">
                 </form>
             </div>
         </div>

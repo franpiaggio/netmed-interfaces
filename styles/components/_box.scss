@@ -1,0 +1,88 @@
+.ns-box{
+    box-shadow: 1px 1px 4px 1px #33333320;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    @media(min-width: 768px){
+        max-width: 700px;
+        flex-direction: row;
+        align-content: center;
+        min-height: 400px;
+    }
+    .ns-box__title{
+        background-color: var(--blue);
+        padding: 1rem 1rem;
+        position: relative;
+        @media(min-width: 768px){
+            flex-wrap: wrap;
+            display: flex;
+            justify-items: flex-start;
+            align-content: flex-start;
+            padding: 2rem;
+            max-width: 30%;
+        }
+    }
+    .ns-box__text{
+        font-family: 'Raleway';
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: .2rem;
+        word-break: break-word;
+        display: inline;
+        @media(min-width: 768px){
+            margin-left: 0;
+            font-weight: 500;
+            margin-top: .5rem;
+            font-size: 1.5rem;
+            max-width: 200px;
+        }
+    }
+    .ns-box__detail{
+        color: white;
+        font-size: .8rem;
+        position: absolute;
+        bottom: 0;
+        display: none;
+        @media(min-width: 768px){
+            display: block;
+        }
+        .ns-box__detail-icon{
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+    .ns-box__uicon{
+        color: #ffffff;
+        font-size: 2rem;
+        @media(min-width: 768px){
+            font-size: 8rem;
+        }
+    }
+    .ns-box__content{
+        flex-basis: 70%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+    }
+    .ns-box__form{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        justify-content: center;
+    }
+    .ns-box__input-item{
+        width: 100%;
+        padding: 0.5em;
+    }
+    .ns-button{
+        @media(min-width: 768px){
+            min-width: 100px;
+            align-self: flex-end;
+        }
+    }
+}
+

@@ -262,24 +262,11 @@
   color: var(--grey);
 }
 
-.ns-login {
-  margin: 0px auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.ns-box {
+  -webkit-box-shadow: 1px 1px 4px 1px #33333320;
+          box-shadow: 1px 1px 4px 1px #33333320;
   width: 100%;
-  padding: 3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: sans-serif;
-}
-
-.ns-login__box {
-  -webkit-box-shadow: 13px 11px 11px -3px rgba(0, 0, 0, 0.16);
-  box-shadow: 13px 11px 11px -3px rgba(0, 0, 0, 0.16);
-  width: 45%;
-  height: 700px;
+  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,44 +274,94 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: var(--blue);
-  border: solid 0.5px var(--grey);
   border-radius: 6px;
 }
 
-.ns-login__boxtitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+@media (min-width: 768px) {
+  .ns-box {
+    max-width: 700px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    min-height: 400px;
+  }
 }
 
-.ns-login__text {
+.ns-box .ns-box__title {
+  background-color: var(--blue);
+  padding: 1rem 1rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .ns-box .ns-box__title {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    padding: 2rem;
+    max-width: 30%;
+  }
+}
+
+.ns-box .ns-box__text {
+  font-family: 'Raleway';
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.4rem;
   font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin-left: .2rem;
+  word-break: break-word;
+  display: inline;
 }
 
-.ns-login__uicon {
+@media (min-width: 768px) {
+  .ns-box .ns-box__text {
+    margin-left: 0;
+    font-weight: 500;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    max-width: 200px;
+  }
+}
+
+.ns-box .ns-box__detail {
+  color: white;
+  font-size: .8rem;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .ns-box .ns-box__detail {
+    display: block;
+  }
+}
+
+.ns-box .ns-box__detail .ns-box__detail-icon {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.ns-box .ns-box__uicon {
   color: #ffffff;
-  font-size: 120px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 0.5em;
+  font-size: 2rem;
 }
 
-.ns-login__content {
+@media (min-width: 768px) {
+  .ns-box .ns-box__uicon {
+    font-size: 8rem;
+  }
+}
+
+.ns-box .ns-box__content {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
   background-color: #ffffff;
@@ -336,7 +373,7 @@
           justify-content: center;
 }
 
-.ns-login__form {
+.ns-box .ns-box__form {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,11 +383,22 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.ns-login__input-item {
+.ns-box .ns-box__input-item {
   width: 100%;
   padding: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .ns-box .ns-button {
+    min-width: 100px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 
 .ns-button {
@@ -426,7 +474,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: var(--violet);
-  padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -480,6 +527,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow: hidden;
   -webkit-transition: height .3s;
   transition: height .3s;
@@ -494,13 +543,29 @@
 }
 
 .ns-table .ns-table__mobile-actions .ns-table__mobile-texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #5782F0;
+  color: white;
   text-align: center;
-  font-size: .8rem;
-  width: 40%;
+  font-size: .8rem 1rem;
+  width: 100%;
+  padding: .5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.ns-table .ns-table__mobile-actions .ns-table__mobile-texts p {
+  margin: 0;
+  padding: 0 .5rem;
 }
 
 .ns-table .ns-table__mobile-actions .ns-table__mobile-icons {
-  width: 60%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,6 +587,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 33%;
 }
 
 .ns-table .ns-table__mobile-actions .ns-table__mobile-icons .ns-table__mobile-icon i {
@@ -539,7 +605,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
+  height: 120px;
 }
 
 .ns-table .ns-table__text:nth-of-type(1),
@@ -615,6 +681,24 @@
   .ns-table .ns-table__header-title:nth-of-type(8) {
     display: none;
   }
+}
+
+.ns-input {
+  margin: 0.5rem;
+  padding: .5rem;
+  border: none;
+  border-bottom: 1px solid var(--blue);
+}
+
+@media (min-width: 768px) {
+  .ns-input {
+    font-size: 1.3rem;
+  }
+}
+
+.ns-input:active, .ns-input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--violet);
 }
 
 .ns-content--main-menu {
@@ -784,5 +868,37 @@
   .ns-content--table-view .ns-filter-box__mobile-filters {
     display: none;
   }
+}
+
+.ns-content--recover {
+  min-height: 55vh;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .ns-content--recover {
+    min-height: 75vh;
+  }
+}
+
+.ns-content--recover .ns-box {
+  margin: 1rem 0;
+}
+
+.ns-content--recover .ns-box__form {
+  width: 100%;
+}
+
+.ns-content--recover .ns-button {
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
