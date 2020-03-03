@@ -15,6 +15,7 @@
         background-color: var(--blue);
         padding: 1rem 1rem;
         position: relative;
+        display: flex;
         @media(min-width: 768px){
             flex-wrap: wrap;
             display: flex;
@@ -31,7 +32,8 @@
         font-weight: bold;
         margin-left: .2rem;
         word-break: break-word;
-        display: inline;
+        width: 100%;
+        margin-left: 1rem;
         @media(min-width: 768px){
             margin-left: 0;
             font-weight: 500;
@@ -67,6 +69,9 @@
         display: flex;
         justify-content: center;
     }
+    .ns-box__content--edit{
+        flex-wrap: wrap;
+    }
     .ns-box__form{
         width: 80%;
         display: flex;
@@ -82,6 +87,87 @@
         @media(min-width: 768px){
             min-width: 100px;
             align-self: flex-end;
+        }
+    }
+    .ns-box__form-group{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        @media(min-width: 768px){
+            flex-wrap: nowrap;
+        }
+        label{
+            margin: 1rem;
+        }
+        .ns-input{
+            width: 100%;
+            @media(min-width: 768px){
+                width: 45%;
+            }
+        }
+    }
+    .ns-box__radio-box{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--grey);
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        .ns-box__radio-box-title{
+            color: var(--blue);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        @media(min-width: 768px){
+            width: 100%;
+            .ns-box__radio-box-title{
+                width: 60%;
+                margin: 0;
+            }
+        }
+        .ns-box__form-group{
+            align-items: center;
+            justify-content: flex-start;
+            label{
+                margin-left: 0;
+            }
+        }
+    }
+    .ns-box__content-data{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        .ns-button{
+            margin-bottom: auto;
+            margin-top: 0;
+            margin-left:auto;
+            margin-right: auto;
+            @media(min-width: 768px){
+                margin-top: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    .ns-box__list-data{
+        max-width: 70%;
+        ul{
+            margin: 1rem;
+            padding: 0rem;
+            @media(min-width: 768px){
+                padding: 2rem 3rem;
+                margin: 1rem 0;
+            }
+            li{
+                list-style-type: none;
+                font-weight: bold;
+                font-size: 0.9rem;
+                span{
+                    color: grey;
+                    font-weight: lighter;
+
+                }
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
     margin: 0.5rem;
     padding: .5rem;
     border: none;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
     @media(min-width: 768px){
         font-size: 1.3rem;
     }
@@ -11,4 +11,8 @@
         outline: none;
         border-bottom: 2px solid var(--violet);
     }
+}
+.ns-label{
+    margin: 0 0.5rem;
+    padding: 0 .5rem;
 }

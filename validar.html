@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Netmed Solutions</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="lib/fontawesome-5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!--
+        Barra de navegación principal
+    -->
+    <nav class="ns-navbar">
+        <div class="container ns-navbar__wrapper">
+            <div class="ns-navbar__logo-wrapper">
+                <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+                <a href="#" class="ns-navbar__link ns-navbar__link--hamburger">
+                    <i class="fas fa-bars ns-navbar__icon ns-navbar__icon--open"></i>
+                    <i class="fas fa-times ns-navbar__icon ns-navbar__icon--close"></i>
+                </a>
+            </div>
+            <div class="ns-navbar__actions">
+                <p class="ns-navbar__user-name">Apellido, Nombre</p>
+                <a href="#" class="ns-navbar__link ns-navbar__link--config">
+                    <i class="fas fa-cog  ns-navbar__icon"></i> 
+                </a>
+                <a href="#" class="ns-navbar__link ns-navbar__link--logout">
+                    <i class="fas fa-sign-out-alt  ns-navbar__icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!--
+        Contenido del Login
+    -->
+    <main class="container ns-content ns-content--validate"> 
+        <div class="ns-box">
+            <div class="ns-box__title">
+                <i class="fas fa-lock ns-box__uicon"></i>
+                <p class="ns-box__text"> Validar usuario <br> médico / empresa</p>
+                <p class="ns-box__detail"> <span class="ns-box__detail-icon">!</span> Para habilita especialistas médicos o empresas </p>
+            </div>
+            <div class="ns-box__content">
+                <form action="#" class="ns-box__form">
+                    <div class="ns-box__form-group">
+                        <select class="ns-input">
+                            <option value="#">Médico o empresa</option>
+                            <option value="#">Opción 2</option>
+                            <option value="#">Opción 3</option>
+                        </select>
+                        <input type="text" class="ns-input">
+                    </div>
+                    <div class="ns-box__form-group">
+                        <label for="enable">
+                            Habilitar
+                            <input id="enable" name="enable" type="radio">
+                        </label>
+                        <label for="disable">
+                            Deshabilitar
+                            <input  id="disable" name="enable" type="radio">
+                        </label>
+                    </div>
+                    <input type="submit" value="Enviar" class="ns-button">
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--
+        Footer
+    -->
+    <footer class="ns-footer">
+        <p class="ns-footer__text">Por cualquier consulta comuníquese al teléfono (011) 4784-0614 a nuestro mail info@netmedsolutions.com <br>            V. 20.1.4</p>
+        <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
+    </footer>
+    <script src="scripts/global.js"></script>
+</body>
+</html>
