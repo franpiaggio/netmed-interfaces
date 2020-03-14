@@ -1,19 +1,158 @@
-.ns-content--recover{
+.ns-content--login{
     min-height: 55vh;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1em 2em;
     @media(min-width: 768px){
+        display: flex;
+        padding: 0;
         min-height: 75vh;
     }
-    .ns-box{
-        margin: 1rem 0;
-    }
-    .ns-box__form{
+    .ns-banner{
         width: 100%;
+        padding: .5em;
+        margin-top: 1em;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        .ns-banner__image{
+            max-width: 100%;
+            height: auto;
+            margin: 0px auto;
+        }
+        @media(min-width: 768px){
+            display: none;
+        }
     }
-    .ns-button{
-        margin-top: 2rem;
+    .ns-login-box{
+        @media(min-width: 768px){
+            width: 40%;
+            background-color: #F5F5F5;
+            padding: 1em 2em;
+        }
+        @media(min-width:1366px){
+            width: 20%;
+        }
+        .ns-login-box__title{
+            color: var(--blue);
+            margin: 1em 0;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            @media(min-width: 768px){
+                text-align: left;
+            }
+        }
+        .ns-login-box__input{
+            border: 1px solid #C4C4C4;
+            padding: .5em;
+            width: 100%;
+            margin-bottom: .5em;
+        }
+        .ns-login-box__actions{
+            margin-top: 1em;
+            display: flex;
+            justify-content: center;
+            .ns-button{
+                margin: 0 .5em;
+            }
+        }
+        .ns-login-box__recover-pass{
+            text-align: center;
+            margin-top: 1em;
+            color: #9E9E9E;
+            a{
+                color: #5782F0;
+            }
+        }
+    }
+    .ns-faq{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        @media(min-width: 768px){
+            display: none;
+        }
+        .ns-faq__title{
+            color: var(--blue);
+            margin: .2em 0;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+        .ns-faq__select{
+            border: 1px solid #C4C4C4;
+            padding: .5em;
+            width: 100%;
+            margin-bottom: .5em;
+            color: var(--blue);
+        }
+        .ns-faq__answer{
+            border: 2px solid var(--blue);
+            border-radius: 5px;
+            padding: 1em;
+            margin: .5em;
+            margin-bottom: 2em;
+            .ns-faq__answer-text{
+                color: var(--blue);
+                margin: 0;
+            }
+        }
+        .ns-faq__answer--hidden{
+            display: none;
+        }
+    }
+    .ns-desktop-faq{
+        display: none;
+        @media(min-width: 768px){
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
+            padding: 1em 4em;
+        }
+        @media(min-width: 1366px){
+            padding: 1em 5em;
+        }
+        .ns-desktop-banner{
+            width: 80%;
+            padding: .5em;
+            margin-top: 1em;
+            border-radius: 10px;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            .ns-banner__image{
+                width: 100%;
+                height: auto;
+                margin: 0px auto;
+            }
+        }
+        .ns-main-menu .ns-main-menu__item{
+            width: 100%;
+            @media(min-width: 1180px){
+                width: 50%;
+            }
+        }
+        .ns-main-menu__item{
+            position: relative;
+        }
+        .ns-main-menu__item:hover .ns-main-menu__hover-box{
+            display: block;
+        }
+        .ns-main-menu__hover-box{
+            display: none;
+            color: var(--blue);
+            background-color: white;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -30%;
+            left: 10%;
+            width: 80%;
+            border: 2px solid var(--blue);
+            cursor: pointer;
+            padding: 1em;
+            .ns-main-menu__hover-text{
+                padding: 0;
+                margin: 0;
+            }
+        }
+
     }
 }

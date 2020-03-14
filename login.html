@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Netmed Solutions</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="lib/fontawesome-5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="ns-navbar">
+        <div class="container ns-navbar__wrapper">
+            <div class="ns-navbar__logo-wrapper ns-navbar__logo-wrapper--no-login">
+                <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+                <a href="#" class="ns-navbar__link ns-navbar__link--back">
+                    <i class="fas fa-arrow-left ns-navbar__icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="ns-content ns-content--login">
+        <div class="ns-banner">
+            <img class="ns-banner__image" src="./img/banner.png" alt="Netmed login banner">
+        </div>
+        <form action="#" class="ns-login-box">
+            <h1 class="ns-login-box__title">Acceso afiliados</h1>
+            <input type="number" placeholder="Nº Documento" name="dni" class="ns-login-box__input">
+            <input type="password" placeholder="Clave" name="password" class="ns-login-box__input">
+            <div class="ns-login-box__actions">
+                <input type="submit" class="ns-button" value="Ingresar">
+                <a href="#" class="ns-button ns-button--outline">Registrarse</a>
+            </div>
+            <p class="ns-login-box__recover-pass">
+                ¿Olvidó su password? <a href="#">Click aquí</a>
+            </p>
+        </form>
+        <div class="ns-faq">
+            <!--
+                * La lista está duplicada por cuestiones de layout
+                * Esta es la versión mobile que funciona con el faq.js
+                * Cada <option> tiene que tener un valor numérico
+                * Ese <option> hace match buscando un:
+                    <div id="answerX" class="ns-faq__answer ns-faq__answer--hidden">
+                        <p class="ns-faq__answer-text"Respuesta</p>
+                    </div>
+                * El id answerX debe reemplazar el valor numérico por la x: answer1, answer2, answer3, etc...    
+            -->
+            <h2 class="ns-faq__title">Preguntas frecuentes</h2>
+            <select class="ns-faq__select" name="faq" id="faq">
+                <option value="" disabled selected hidden>Seleccionar pregunta frecuente</option>
+                <option value="1">¿Cómo comparto mis estudios con otra persona?</option>
+                <option value="2">¿Cómo puedo modificar mis datos?</option>
+                <option value="3">Otra pregunta</option>
+            </select>
+            <div id="answer1" class="ns-faq__answer ns-faq__answer--hidden">
+                <p class="ns-faq__answer-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+            </div>
+            <div id="answer2" class="ns-faq__answer ns-faq__answer--hidden">
+                <p class="ns-faq__answer-text">Otra respuesta, hay que poner el texto completo.</p>
+            </div>
+            <div id="answer3" class="ns-faq__answer ns-faq__answer--hidden">
+                <p class="ns-faq__answer-text">Otra de ejemplo, completar el texto.</p>
+            </div>
+        </div>
+        <!--
+            * Las respuestas en versión desktop son más simples
+            * Solo con CSS se muestra/oculta la caja con el contenido
+        -->
+        <div class="ns-desktop-faq">
+            <div class="ns-desktop-banner">
+                <img class="ns-banner__image" src="./img/banner.png" alt="Netmed login banner">
+            </div>
+            <ul class="ns-main-menu">
+                <li class="ns-main-menu__item">
+                    <a href="#" class="ns-main-menu__button">
+                        ¿Cómo comparto mis estudios con otra persona?
+                    </a>
+                    <div class="ns-main-menu__hover-box">
+                        <p class="ns-main-menu__hover-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+                    </div>
+                </li>
+                <li class="ns-main-menu__item">
+                    <a href="#" class="ns-main-menu__button">
+                        ¿Cómo comparto mis estudios con otra persona?
+                    </a>
+                    <div class="ns-main-menu__hover-box">
+                        <p class="ns-main-menu__hover-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+                    </div>
+                </li>
+                <li class="ns-main-menu__item">
+                    <a href="#" class="ns-main-menu__button">
+                        ¿Cómo comparto mis estudios con otra persona?
+                    </a>
+                    <div class="ns-main-menu__hover-box">
+                        <p class="ns-main-menu__hover-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+                    </div>
+                </li>
+                <li class="ns-main-menu__item">
+                    <a href="#" class="ns-main-menu__button">
+                        ¿Cómo comparto mis estudios con otra persona?
+                    </a>
+                    <div class="ns-main-menu__hover-box">
+                        <p class="ns-main-menu__hover-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+                    </div>
+                </li>
+                <li class="ns-main-menu__item">
+                    <a href="#" class="ns-main-menu__button">
+                        ¿Cómo comparto mis estudios con otra persona?
+                    </a>
+                    <div class="ns-main-menu__hover-box">
+                        <p class="ns-main-menu__hover-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+                    </div>
+                </li>
+                <li class="ns-main-menu__item">
+                    <a href="#" class="ns-main-menu__button">
+                        ¿Cómo comparto mis estudios con otra persona?
+                    </a>
+                    <div class="ns-main-menu__hover-box">
+                        <p class="ns-main-menu__hover-text">Debe hacer click en el ícono “compartir” del estudio que desea enviar y cargar el mail de quien va a recibir el estudio</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="ns-footer">
+        <p class="ns-footer__text">Por cualquier consulta comuníquese al teléfono (011) 4784-0614 a nuestro mail info@netmedsolutions.com <br>            V. 20.1.4</p>
+        <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
+    </footer>
+    <script src="scripts/faq.js"></script>
+</body>
+</html>
