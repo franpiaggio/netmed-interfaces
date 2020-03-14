@@ -46,6 +46,14 @@
             </div>
             <div class="ns-box__content">
                 <form action="#" class="ns-box__form">
+                    <div class="ns-search-box">
+                        <label for="search">Búsqueda:</label>
+                        <input type="number" placeholder="Documento" class="ns-input" id="search">
+                        <input type="submit" class="ns-button">
+                        <ul class="ns-search-box__dropdown" id="searchList">
+                            <!-- Example: <li class="ns-search-box__item"></li> -->
+                        </ul>
+                    </div>
                     <div class="ns-box__radio-box">
                         <p class="ns-box__radio-box-title">Habilitar usuarios</p>
                         <div class="ns-box__form-group">
@@ -111,5 +119,6 @@
         <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
     </footer>
     <script src="scripts/global.js"></script>
+    <script src="scripts/searchbox.js"></script>
 </body>
 </html>
