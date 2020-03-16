@@ -2,8 +2,13 @@ const searchInput = document.getElementById('search');
 const searchList = document.getElementById('searchList');
 
 // todo: fetch data and complete the list
-const exampleData = ['12345', '23456', '789123'];
-
+let exampleData = ['12345', '23456', '789123'];
+/*
+Example:
+fetch('some_url').then(function(response){
+    exampleData = ['DNI1', 'DNI2', 'DNI3'];
+})
+*/
 searchInput.onkeyup = function(ev){
     // Si hay un valor
     if(this.value){

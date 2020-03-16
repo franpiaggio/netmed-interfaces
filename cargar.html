@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Netmed Solutions</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="lib/fontawesome-5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!--
+        Barra de navegación principal
+    -->
+    <nav class="ns-navbar">
+        <div class="container ns-navbar__wrapper">
+            <div class="ns-navbar__logo-wrapper">
+                <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+                <a href="#" class="ns-navbar__link ns-navbar__link--hamburger">
+                    <i class="fas fa-bars ns-navbar__icon ns-navbar__icon--open"></i>
+                    <i class="fas fa-times ns-navbar__icon ns-navbar__icon--close"></i>
+                </a>
+            </div>
+            <div class="ns-navbar__actions">
+                <p class="ns-navbar__user-name">Apellido, Nombre</p>
+                <a href="#" class="ns-navbar__link ns-navbar__link--config">
+                    <i class="fas fa-cog  ns-navbar__icon"></i> 
+                </a>
+                <a href="#" class="ns-navbar__link ns-navbar__link--logout">
+                    <i class="fas fa-sign-out-alt  ns-navbar__icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!--
+        Contenido del Login
+    -->
+    <main class="container ns-content ns-content--card-view"> 
+        <div class="ns-seach-box-wrapper">
+            <form action="#" class="ns-search-box">
+                <label for="search">Búsqueda de paciente:</label>
+                <input type="number" placeholder="Documento" class="ns-input" id="search">
+                <input type="submit" class="ns-button" value="Buscar">
+                <ul class="ns-search-box__dropdown" id="searchList">
+                    <!-- Ejemplo a cargar en JS: <li class="ns-search-box__item"></li> -->
+                </ul>
+            </form>
+        </div>
+        <div class="ns-card">
+            <div class="ns-card__title">
+                <h1 class="ns-card__text"> Cargar estudios </h1>
+            </div>
+            <form action="#" class="ns-card__content">
+                <div class="ns-card__column">
+                    <div class="ns-card__input-wrapper">
+                        <label for="name" class="ns-label">Nombre *</label>
+                        <input type="text" class="ns-input" placeholder="Nombre completo" name="fullName" required>
+                    </div>
+                    <div class="ns-card__input-wrapper">
+                        <label for="document" class="ns-label">Documento *</label>
+                        <input type="Number" class="ns-input" placeholder="Ingresar DNI" name="document" required>
+                    </div>
+                    <div class="ns-card__input-wrapper">
+                        <label for="medicalInsurance" class="ns-label">Prepaga *</label>
+                        <select name="medicalInsurance" class="ns-input">
+                            <option value="" disabled selected hidden>Seleccione su prepaga</option>
+                            <option value="a">Opción 1</option>
+                            <option value="b">Opción 2</option>
+                        </select>
+                    </div>
+                    <div class="ns-card__input-wrapper">
+                        <label for="medicalInsurancePlan" class="ns-label">Plan de prepaga</label>
+                        <input type="text" class="ns-input" placeholder="Nombre del plan" name="medicalInsurancePlan">
+                    </div>
+                    <div class="ns-card__input-wrapper ns-card__input-wrapper--info">
+                        <p>* Campos obligatorios</p>
+                    </div>
+                    <div class="ns-card__input-wrapper">
+                        <label for="file1">Estudio</label>
+                        <input type="file" id="file1" name="file1">
+                    </div>
+                </div>
+                <div class="ns-card__column">
+                    <div class="ns-card__input-wrapper">
+                        <label for="description" class="ns-label">Descripción *</label>
+                        <input type="text" class="ns-input" placeholder="Ingresar descripción" name="description" required>
+                    </div>
+
+                    <div class="ns-card__input-wrapper">
+                        <label for="matricula" class="ns-label">Matrícula *</label>
+                        <input type="text" class="ns-input" placeholder="Matrículo del médico solicitante" name="matricula" required>
+                    </div>
+ 
+                    <div class="ns-card__input-wrapper">
+                        <label for="mode" class="ns-label">Modalidad *</label>
+                        <select name="mode" class="ns-input" required>
+                            <option value="" disabled selected hidden>Seleccione modalidad</option>
+                            <option value="a">Opción 1</option>
+                            <option value="b">Opción 2</option>
+                        </select>
+                    </div>
+                    <div class="ns-card__input-wrapper">
+                        <label for="cuit" class="ns-label">CUIT</label>
+                        <input type="text" class="ns-input" placeholder="CUIT Empresa Prepaga" name="cuit">
+                    </div>
+                    <div class="ns-card__input-wrapper ns-card__input-wrapper--checkbox">
+                        <label class="ns-label">Otra prepaga <input type="checkbox" name="other" value="true"> </label>
+                        <input type="text" class="ns-input" name="other" disabled>
+                    </div>
+                    <div class="ns-card__input-wrapper">
+                        <label for="file2">Informe</label>
+                        <input type="file" id="file2" name="file2">
+                    </div>
+                </div>
+                <div class="ns-card__actions">
+                    <input type="submit" class="ns-button" value="Ingresar">
+                    <a href="#" class="ns-button ns-button--outline">Borrar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--
+        Footer
+    -->
+    <footer class="ns-footer">
+        <p class="ns-footer__text">Por cualquier consulta comuníquese al teléfono (011) 4784-0614 a nuestro mail info@netmedsolutions.com <br>            V. 20.1.4</p>
+        <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
+    </footer>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/searchbox.js"></script>
+</body>
+</html>

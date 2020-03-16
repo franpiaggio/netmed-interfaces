@@ -1,0 +1,145 @@
+.ns-html-table {
+    width: 100%;
+
+    .ns-html-table__heading {
+        background-color: var(--blue);
+        color: white;
+        text-align: center;
+
+        th {
+            padding: 1.5em 0;
+            line-height: 1;
+        }
+    }
+
+    .ns-html-table__content {
+        text-align: center;
+
+        @media(min-width: 1024px) {
+            &:nth-of-type(even) {
+                background-color: #F2F6F9;
+            }
+        }
+
+        td {
+            padding: 1.5em 0;
+        }
+    }
+}
+
+.ns-circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: auto;
+    @media(min-width: 1024px){
+        margin: 0px auto;
+    }
+}
+
+.ns-circle--on {
+    background-color: #2ED90B;
+}
+
+.ns-circle--off {
+    background-color: #D90B0B;
+}
+
+@media (max-width: 1024px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin: 0 0 1rem 0;
+        border-radius: 15px;
+    }
+
+    tr td:nth-of-type(1){
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    tr td:nth-of-type(12){
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    tr:nth-child(odd) {
+        background: #ccc;
+    }
+
+    td {
+        border: none;
+        border: 1px solid var(--grey);
+        position: relative;
+        text-align: right;
+        padding: 1em 3em !important;
+    }
+
+    td:before {
+        float: left;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Nombre";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Apellido";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Nacimiento";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Email";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Teléfono";
+    }
+
+    td:nth-of-type(6):before {
+        content: "DNI";
+    }
+
+    td:nth-of-type(7):before {
+        content: "Dirección";
+    }
+
+    td:nth-of-type(8):before {
+        content: "Inscripción";
+    }
+
+    td:nth-of-type(9):before {
+        content: "Último Login";
+    }
+
+    td:nth-of-type(10):before {
+        content: "Ingresos";
+    }
+
+    td:nth-of-type(11):before {
+        content: "Estudios";
+    }
+
+    td:nth-of-type(12):before {
+        content: "Mail validado";
+    }
+}

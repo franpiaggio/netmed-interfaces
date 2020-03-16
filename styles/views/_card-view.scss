@@ -1,0 +1,18 @@
+.ns-content--card-view{
+    min-height: 55vh;
+    padding: 1em 2em;
+    @media(min-width: 768px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3em;
+        min-height: 75vh;
+    }
+    .ns-search-box__dropdown{
+        left: 5%;
+        @media(min-width: 768px){
+            left: 25%;
+        }
+    }
+}

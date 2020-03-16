@@ -1,0 +1,65 @@
+.ns-card{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    .ns-card__title{
+        background-color: var(--blue);
+        color: white;
+        text-align: center;
+        padding: 1em;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        .ns-card__text{
+            margin: 0;
+        }
+    }
+    .ns-card__content{
+        padding: 1em .5em;
+        @media(min-width: 768px){
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2em 3em;
+        }
+        .ns-card__input-wrapper{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .ns-card__input-wrapper--checkbox{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            @media(min-width: 768px){
+                min-height: 95px;
+            }
+            .ns-input{
+                width: 98%;
+            }
+        }
+        .ns-card__column{
+            @media(min-width: 768px){
+                width: 50%;
+                padding: 0 .5em;
+            }
+        }
+        .ns-card__input-wrapper--info{
+            display: none;
+            @media(min-width: 768px){
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                text-align: left;
+                min-height: 95px;
+            }
+        }
+        .ns-card__actions{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1em;
+            .ns-button{
+                margin-left: 1em;
+            }
+        }
+    }
+}
