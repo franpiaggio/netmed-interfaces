@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Netmed Solutions</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.4.1/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="lib/fontawesome-5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!--
+        * Se cargan estilos y script de librería toastify
+        * Se vincula un evento click a la función que muestra toastify
+        * Si esto lo hacen desde php con un redirect + error se me ocurren algunas opciones:
+
+        1) Devolver un html que tenga
+        Esto voy a ejemplificar en este documento
+        <script>
+            ---código de notificación
+        </script>
+
+        2) Devolver un HTML con query string ?error="mensaje" y el script sabe reconocer y ejecutar
+        Esto voy a ejemplificar en notificacionesv2.html
+    -->
+    <nav class="ns-navbar">
+        <div class="container ns-navbar__wrapper">
+            <div class="ns-navbar__logo-wrapper">
+                <img src="img/logo.png" alt="Netmed solutions logo" class="ns-navbar__logo">
+                <a href="#" class="ns-navbar__link ns-navbar__link--hamburger">
+                    <i class="fas fa-bars ns-navbar__icon ns-navbar__icon--open"></i>
+                    <i class="fas fa-times ns-navbar__icon ns-navbar__icon--close"></i>
+                </a>
+            </div>
+            <div class="ns-navbar__actions">
+                <p class="ns-navbar__user-name">Apellido, Nombre</p>
+                <a href="#" class="ns-navbar__link ns-navbar__link--config">
+                    <i class="fas fa-cog  ns-navbar__icon"></i> 
+                </a>
+                <a href="#" class="ns-navbar__link ns-navbar__link--logout">
+                    <i class="fas fa-sign-out-alt  ns-navbar__icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="container ns-content ns-content--validate"> 
+        <div class="ns-box">
+            <div class="ns-box__title">
+                <i class="fas fa-lock ns-box__uicon"></i>
+                <p class="ns-box__text"> Validar usuario <br> médico / empresa</p>
+                <p class="ns-box__detail"> <span class="ns-box__detail-icon">!</span> Para habilita especialistas médicos o empresas </p>
+            </div>
+            <div class="ns-box__content">
+                <form action="#" class="ns-box__form">
+                    <div class="ns-box__form-group">
+                        <select class="ns-input">
+                            <option value="#">Médico o empresa</option>
+                            <option value="#">Opción 2</option>
+                            <option value="#">Opción 3</option>
+                        </select>
+                        <input type="text" class="ns-input">
+                    </div>
+                    <div class="ns-box__form-group">
+                        <label for="enable">
+                            Habilitar
+                            <input id="enable" name="enable" type="radio">
+                        </label>
+                        <label for="disable">
+                            Deshabilitar
+                            <input  id="disable" name="enable" type="radio">
+                        </label>
+                    </div>
+                    <input type="button" value="Error" class="ns-button" id="not1">
+                    <input type="button" value="Info" class="ns-button" id="not2">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="ns-footer">
+        <p class="ns-footer__text">Por cualquier consulta comuníquese al teléfono (011) 4784-0614 a nuestro mail info@netmedsolutions.com <br>            V. 20.1.4</p>
+        <img src="img/footer-logo.png" alt="netmedsolutions logo" class="ns-footer__logo">
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="scripts/global.js"></script>
+    <script>
+        // Busco si hay URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('not')){
+
+            // /example.html?not='Mensaje'
+            // Hay notificación
+            const config = {
+                text: urlParams.get('not'),
+                close: true,
+                duration: 4000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: '#004e91'
+            }
+
+            // Si el querystring tiene /example.html?not='Mensaje'&error
+            // se muestra en rojo
+            if(urlParams.has('error')){
+                config.backgroundColor = '#E90B0B';
+            }
+
+            Toastify(config).showToast();
+        }
+    </script>
+</body>
+</html>
